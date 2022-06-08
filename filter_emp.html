@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        Filters Employee
+    </title>
+</head>
+
+<body>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <div class="container">
+        <h1>Filter Employee detail</h1>
+    </div>
+    <hr>
+    <form action="/filter_emp" method="post">
+        {% csrf_token %}
+        <label for="name">Employee first/last Name</label><br>
+        <input type="text" id="name" name="name" value="{{name}}"><br>
+
+        <label for="dept">Department</label><br>
+        <input type="text" id="dept" name="dept" value="{{dept}}"><br>
+
+        <label for="role">Role</label><br>
+        <input type="text" id="role" name="role" value="{{role}}"><br>
+        <hr>
+        <button type="submit" class="btn btn-primary">submit</button>
+    </form>
+
+
+
+</body>
+
+</html>
